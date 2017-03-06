@@ -1,0 +1,75 @@
+
+CPPTRAJ: Trajectory Analysis. V15.00
+    ___  ___  ___  ___
+     | \/ | \/ | \/ | 
+    _|_/\_|_/\_|_/\_|_
+
+| Date/time: 07/15/15  12:45:00
+| Available memory: 86.3201 MB
+
+	Reading 'prmtop' as Amber Topology
+INPUT: Reading Input from file rmsd.cpptraj
+  [trajin 02_Heat.mdcrd]
+	Reading '02_Heat.mdcrd' as Amber Trajectory
+  [trajin 03_Prod.mdcrd]
+	Reading '03_Prod.mdcrd' as Amber Trajectory
+  [reference 01_Min.rst]
+	Reading '01_Min.rst' as Amber Restart
+  [autoimage]
+    AUTOIMAGE: To box center based on center of mass, anchor is first molecule.
+  [rms reference mass out 02_03.rms time 2.0 :2]
+	Reference mask: [:2](10)
+    RMSD: (:2), reference is "01_Min.rst" (:2), with fitting, mass-weighted.
+---------- RUN BEGIN -------------------------------------------------
+
+PARAMETER FILES:
+ 0: 'prmtop', 1912 atoms, 633 res, box: Orthogonal, 631 mol, 630 solvent, 400 frames
+
+INPUT TRAJECTORIES:
+ 0: '02_Heat.mdcrd' is an AMBER trajectory, Parm prmtop (Orthogonal box) (reading 100 of 100)
+ 1: '03_Prod.mdcrd' is an AMBER trajectory, Parm prmtop (Orthogonal box) (reading 300 of 300)
+  Coordinate processing will occur on 400 frames.
+
+REFERENCE FRAMES (1 total):
+    0: '01_Min.rst', frame 1
+	Active reference frame for distance-based masks is 0
+TIME: Run Initialization took 0.0005 seconds.
+
+BEGIN TRAJECTORY PROCESSING:
+.....................................................
+ACTION SETUP FOR PARM 'prmtop' (2 actions):
+  0: [autoimage]
+	Anchor molecule is 1
+	630 molecules are mobile.
+  1: [rms reference mass out 02_03.rms time 2.0 :2]
+	Target mask: [:2](10)
+Warning: Coordinates are being rotated and box coordinates are present.
+Warning: Unit cell vectors are NOT rotated; imaging will not be possible
+Warning:  after the RMS-fit is performed.
+----- 02_Heat.mdcrd (1-100, 1) -----
+ 0% 10% 20% 30% 40% 51% 61% 71% 81% 91% 100% Complete.
+
+----- 03_Prod.mdcrd (1-300, 1) -----
+ 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% Complete.
+
+Read 400 frames and processed 400 frames.
+TIME: Trajectory processing: 0.1983 s
+TIME: Avg. throughput= 2016.8305 frames / second.
+
+ACTION OUTPUT:
+
+DATASETS:
+  2 data sets:
+	01_Min.rst:1 "ACE" (reference), size is 1, refindex 0 (1912 atoms)
+	RMSD_00001 "RMSD_00001" (double, rms), size is 400
+
+DATAFILES:
+  02_03.rms (Standard Data File):  RMSD_00001
+---------- RUN END ---------------------------------------------------
+TIME: Total execution time: 0.2361 seconds.
+--------------------------------------------------------------------------------
+To cite CPPTRAJ use:
+Daniel R. Roe and Thomas E. Cheatham, III, "PTRAJ and CPPTRAJ: Software for
+  Processing and Analysis of Molecular Dynamics Trajectory Data". J. Chem.
+  Theory Comput., 2013, 9 (7), pp 3084-3095.
+

@@ -1,0 +1,47 @@
+
+          -------------------------------------------------------
+          Amber 9  SANDER                 Scripps/UCSF 2004
+          -------------------------------------------------------
+
+| Run on 02/08/2017 at 19:35:38
+  [-O]verwriting output
+
+File Assignments:
+|  MDIN: TRPcage_min.in                                                        
+| MDOUT: TRPcage_min.out                                                       
+|INPCRD: TRPcage.inpcrd                                                        
+|  PARM: TRPcage.prmtop                                                        
+|RESTRT: TRPcage_min.rst                                                       
+|  REFC: refc                                                                  
+| MDVEL: mdvel                                                                 
+|  MDEN: mden                                                                  
+| MDCRD: mdcrd                                                                 
+|MDINFO: TRPcage_min.mdinfo                                                    
+|INPDIP: inpdip                                                                
+|RSTDIP: rstdip                                                                
+
+ 
+ Here is the input file:
+ 
+Minimize                                                                       
+ &cntrl                                                                        
+  imin=1,                                                                      
+  ntx=1,                                                                       
+  irest=0,                                                                     
+  maxcyc=2000,                                                                 
+  ncyc=1000,                                                                   
+  ntpr=100,                                                                    
+  ntwx=0,                                                                      
+  cut=8.0,                                                                     
+ /                                                                             
+
+--------------------------------------------------------------------------------
+   1.  RESOURCE   USE: 
+--------------------------------------------------------------------------------
+
+| Flags:                                                                        
+ getting new box info from bottom of inpcrd
+|  INFO: Old style inocrd file read
+
+| peek_ewald_inpcrd: Box info not found in inpcrd
+|Largest sphere to fit in unit cell has radius =     0.000
