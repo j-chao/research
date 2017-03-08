@@ -1,10 +1,9 @@
-To Do
-==============================================
+TODO
+-----------------------
 [DONE] start Distance Creations for 2m18 (split double duplex)
     + minimize 2m18 separately and run dist creations for both
     + rerun dynamics_and_move.py, ensuring that .dyn files are ported from
       previous dist.    
-
 
 [CURRENT] run pulling sims for 2m18 
 
@@ -15,21 +14,15 @@ To Do
         old param: RNA_CG_05_10_16_b_1p4eps.prm
         new param: RNA_CG_05_10_16_b_1p4eps_2p0tors.prm
 
-        grep -rl 'RNA_CG_05_10_16_b_1p4eps.prm' . | xargs sed -i 's/RNA_CG_05_10_16_b_1p4eps.prm/RNA_CG_05_10_16_b_1p4eps_2p0tors.prm/g' &
+        grep -rl 'RNA_CG_05_10_16_b_1p4eps.prm' . | xargs sed -i 's/RNA_CG_05_10_16_b_1p4eps.prm/RNA_CG_05_10_16_b_1p4eps_2p0tors.prm/g'
 
-
-
-
-ISSUES
-==============================================
-- runaway job on node51?
-- numpy warnings for first dist when running setup_wham.py? (screenshot)
+    | running for 1my9TOP_22..29p5
 
 
 
 
 SIMULATION PROCEDURE
-==============================================
+-----------------------
 - run pdbxyz.x to create .xyz structure 
 - run mapping_atocg.py to create cg.xyz structure
 - run xyz2cg_xyz.py to create cg.xyz.xyz structure
@@ -43,10 +36,11 @@ SIMULATION PROCEDURE
 
 
 WHAM PROCEDURE
-==============================================
+-----------------------
 - run setup_wham_sara.py on nodes where ran pulling simulations
 - copy all *wham_input files to another node in a folder wham (use
     copy_files shell script)
 - modify metadata.wham with file path of wham folder
 - cut the number of windows based on the the systems
 - run wham python script (takes about 30 minutes)
+
