@@ -17,6 +17,8 @@ To Do
 
         grep -rl 'RNA_CG_05_10_16_b_1p4eps.prm' . | xargs sed -i 's/RNA_CG_05_10_16_b_1p4eps.prm/RNA_CG_05_10_16_b_1p4eps_2p0tors.prm/g' &
 
+    - copying .wham_input files: find . -type f -name "*.wham_input" -exec scp {} juchao@node120:/scratch/juchao/1my9_WHAM \;
+
 
 
 
